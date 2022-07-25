@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>hometown</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+    <script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+  </head>
+  <body>
+    <header>
+      <h1>MY HOMETOWN</h1>
+      </header>
+      <nav>
+          <a class="navbar-brand" href="">Kanpur</a>
+          <a class="navbar-items" href="hometown.html">Home</a>
+          <a class="navbar-items" href="resume02.html">My Bio</a>
+          <a class="navbar-items" href="https://en.wikipedia.org/wiki/Kanpur">More</a>
+      </nav>
+      <p style="color:white;">
+  Kanpur is the biggest city of the state and is the main centre of commercial and industrial activities. Formerly it was known as Manchester of India. Now it is the commercial capital of Uttar Pradesh. It is situated on the most important national highways no.</p>
+<h2 style="color: white;">My life</h2>
+<h3>The Market</h3>
+<table>
+  <tr>
+    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV6igfROZsOU8VDzsbxnIKwEYGQM1xekh2VWOA5Kh3QNhTvjxTaXTBdafbJQOLGvCz6eE&usqp=CAU" alt=""</td>
+    <td><img src="" alt=""></td>
+    <td><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2020-04/24/full/1587749293-324.jpg" style="height:200px;" alt=""></td>
+  </tr>
+</table>
+<h3>Dining and restaurants</h3>
+<table>
+  <tr>
+    <td><img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201802231621388236-77015efa221711e98be80242ac110002.jpg" style="height:200px;" alt=""></td>
+    <td><img src="https://media-cdn.tripadvisor.com/media/photo-s/14/bf/26/10/regenta-central-the-crystal.jpg" style="height:200px;" alt=""></td>
+    <td><img src="https://media.weddingz.in/images/3e28c81b5b9790b85886093d00a06f10/barracks-swaroop-nagar-kanpur.jpg" style="height:200px;" alt=""></td>
+  <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLxyfRrUmeuciurpkFPDJ_-nX92kQRBQvuUQ&usqp=CAU" style="height:200px;" alt=""></td>
+</tr>
+</table>
+<h3>Hotels and Staying facilities</h3>
+<table>
+  <tr>
+    <td><img src="https://r1imghtlak.mmtcdn.com/af14b40471f811eab6090242ac110002.jpg?&output-quality=75&downsize=583:388&output-format=jpg" style="height:200px;" alt=""></td>
+    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnMUODY0JTLknaYixX0wIUeTSWGs1i8gDAMYS-oFuva-9UJ-u-B-dYvN4OiEJznnQmokQ&usqp=CAU" style="height:200px;" alt=""></td>
+    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAsfNgfnCtdn4vPg_Q8a4eHh1dwJGWma34hQOeYyPEbhMzzkq67XRqeevI182Sxr5NEW4&usqp=CAU" style="height:200px;" alt=""></td>
+  </tr>
+</table>
+<h3>Our History</h3>
+<p>Kanpur or Cawnpore is a city in the state of Uttar Pradesh in India. Founded in 1803, Kanpur became one of the most important commercial and military stations of British India. Nestled on the banks of Ganges River, Kanpur stands as the major financial and industrial centre of North India and also the ninth-largest urban economy in India.Today it is famous for its colonial architecture, gardens, parks and fine quality leather products which are exported mainly to the West</p>
+<p>The city is famous for its leather and textile industries. It is the 12th most populous city and the 11th most populous urban agglomeration in India. Kanpur was an important British garrison town until 1947, when India gained independence. The urban district of Kanpur Nagar serves as the headquarters of the Kanpur Division, Kanpur Range and Kanpur Zone</p>
+<audio controls autoplay muted>
+  <source src="audio.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<br><br>
+<video width="320" height="240" controls>
+  <source src="video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<!---adding geo location and map lug ins----->
+<p>GeoLocation and map API.</p>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238075.0840178753!2d81.19798895701499!3d21.19521012244197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a293cccec49ed45%3A0x2b3ff3bd73c91877!2sBhilai%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1649185951605!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<p id="demo"></p>
+<!---drag and drop---->
+<p>Drag the selected products in the given box:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="css/Kanpur_City.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<!-----counting the no of items selected--->
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+            </div>
+        </section>
+  </body>
+</html>

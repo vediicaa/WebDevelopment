@@ -1,0 +1,45 @@
+*{
+    background-image: url('gaming.jfif');
+    background-repeat: no-repeat;
+    background-size: 100% 722px;
+    background-attachment: fixed;
+    color:white;
+    font-weight: bold;
+}
+h1{
+    font-size: 60px;
+    text-align: center;
+}
+h2{
+    font-size: 40px;
+    text-align: center;
+}
+p1{
+    text-align: left;
+    font-size: 20px;
+}
+.a1{
+    float:left;
+    margin-left: 13%;
+    width:200px;
+
+}
+.a2{
+    float:left;
+    margin-left: 16%;
+    width:200px;
+}
+.a3{
+    float:left;
+    margin-left: 19%;
+    width:200px;
+}
+.p1, .p2, .p3, .p4, .p5{
+    float:left;
+    margin-left: 9%;
+    width:200px;
+}
+p{
+    font-size: 25px;
+    text-align: center;
+}

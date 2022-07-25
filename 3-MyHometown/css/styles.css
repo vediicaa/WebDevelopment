@@ -1,0 +1,30 @@
+body{
+  background-color: black;
+  color:white;
+  background-repeat: no-repeat;
+}
+h1
+{
+  text-align: center;
+  color: white;
+}
+nav{
+  background-color: #FFD700;
+  height:50px;
+  width:100%;
+
+}
+.navbar-brand
+{
+
+font-size:30px;
+font-size: 40px;
+ left:0;
+  font-weight: bold;
+  color:white;
+}
+.navbar-items
+{
+  font weight: bold;
+  color:white;
+}
