@@ -1,2 +1,2 @@
 # WebDevelopment
-Adding all the websites I made while learning Development
+Contains all the basic websites I made while learning development
