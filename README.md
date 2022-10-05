@@ -1,2 +1,2 @@
 # WebDevelopment
-Contains all the basic websites I made while learning development
+includes basic websites using html and css
