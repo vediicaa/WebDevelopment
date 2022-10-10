@@ -1,2 +1,2 @@
 # WebDevelopment
-includes basic websites using html and css
+Includes basic websites using html and css
